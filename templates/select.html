@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>言語選択</title>
+    <!-- <link rel="stylesheet" href="styles.css">--> 
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+<body>
+    <div class="language-selector">
+        <a href="selected?lang=kr">韓国語</a>
+        <a href="selected?lang=vt">ベトナム語</a>
+        <a href="selected?lang=cn">中国語</a>
+        <a href="selected?lang=hn">ヒンディー語</a>
+    </div>
+
+    <BR>
+    上のメニューである程度覚えたら下のリンクでテストしましょう。
+    <div class="language-selector">
+        <a href="quiz?lang=kr">韓国語</a>
+        <a href="quiz?lang=vt">ベトナム語</a>
+        <a href="quiz?lang=cn">中国語</a>
+        <a href="quiz?lang=hn">ヒンディー語</a>
+    </div>
+
+    <p>{{name}}</p>
+</body>
+</html>

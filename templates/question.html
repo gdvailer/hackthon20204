@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>単語クイズ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h2>{{ word }}</h2>
+    <p>
+        <img src='static/img/image_{{ num }}.png'>
+    </p>
+    <p>日本語: {{ japanese }}</p>
+    <p>カタカナ読み: {{ katakana }}</p>
+    
+    <p>
+    <a href="selected?lang={{ lang }}&ok=1&num={{ num }}">知ってる。</a><br></p>
+    <p><a href="selected?lang={{ lang }}">次へ</a></p>
+    <p><a href="./">言語選択へ戻る</a></p>
+</body>
+</html>

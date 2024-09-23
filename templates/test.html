@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    
+   
+    </head>
+<body>
+    <h2>{{ word }}</h2>
+    <p>
+        <img src='static/img/image_{{ num }}.png'>
+    </p>
+
+    <button id="showButton" onClick="CorrectButton()">正解表示</button>
+
+    <p>日本語:<p id="hiddenText"> {{ japanese }}</p></p>
+    <p>カタカナ読み:<p id="hiddenText2"> {{ katakana }}</p></p>
+    
+    <p>
+    <a href="quiz?lang={{ lang }}&ok=3&num={{ num }}">完全に覚えた！</a><br></p>
+    <p><a href="quiz?lang={{ lang }}">次へ</a></p>
+    <p><a href="./">言語選択へ戻る</a></p>
+
+    <script>
+        const hiddenText = document.getElementById('hiddenText');
+
+        function CorrectButton(){
+            hiddenText.style.opacity = 1;
+            hiddenText2.style.opacity = 1;
+        }
+    </script>
+</body>
+</html>
